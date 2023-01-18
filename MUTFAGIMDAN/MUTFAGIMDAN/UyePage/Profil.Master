@@ -1,0 +1,110 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Profil.master.cs" Inherits="MUTFAGIMDAN.Profil" %>
+
+<!DOCTYPE html>
+
+<html lang="tr">
+<head runat="server">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUTFAĞIMDAN</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link href="../css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'/>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link href="../css/sidebar.css" rel="stylesheet" />
+    <link href="../css/ProfilDuzen.css" rel="stylesheet" />
+    <link href="../css/all.min.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <header>
+                <div class="sidebar">
+                    <div class="sidebar_inner">
+                        <div class="sidebar_header">
+                            <button style="color: forestgreen" type="button" class="sidebar_burger" onclick="toggleSidebar()">
+                                <i class="fa-solid fa-bars burger-icon"></i>
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+
+                <a id="Anasayfa1" runat="server" class="logo"><i class="fas fa-utensils"></i>MUTFAĞIMDAN</a>
+                <nav class="navbar">
+                    <a class="" id="Anasayfa" runat="server">Ana Sayfa</a>
+                    <a id="Tarifler" runat="server">Tarifler</a>
+                  
+                </nav>
+
+                <div class="icons">
+                    <i  class="fas fa-bars" id="menu-bars"></i>
+                    <a  id="kullanici" runat="server" class="fas fa-user"></a>
+                </div>
+
+            </header>
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+
+        </div>
+   
+    <aside class="sidebar">
+        <div class="sidebar_inner">
+            <footer class="sidebar_footer">
+                <nav style="margin-top: 10rem;" class="sidebar_nav">
+
+                  
+                  <div id="navv">     
+                 <a  id="profilduzenle" runat="server" class="">
+                        <i class="fa-solid fa-user"> </i>
+                        <span style="animation-delay: .2s;">Profil Düzenle</span></a>
+                       <a  id="tarifekle" runat="server" class="">
+                        <i class="fa-solid fa-plus"> </i>
+                        <span style="animation-delay: .2s;">Tarif Ekle</span></a>
+
+                 
+                         <a  id="YapSat" runat="server" class="">
+                        <i class="fa-solid fa-turkish-lira-sign"></i>
+                        <span style="animation-delay: .5s">Yap-Sat</span></a>
+
+                   
+                       <a  id="Tariflerim" runat="server" class="">
+                        <i class="fa-solid fa-coffee"> </i>
+                        <span style="animation-delay: .3s;">Tariflerim</span></a>
+                     <%--  <button onclick="window.location.href = 'Tariflerim.aspx';"  type="button">
+                        <i class="fa-solid fa-coffee"></i>
+                        <span style="animation-delay: .3s">Tariflerim</span>
+                    </button>--%>
+                       <a  id="SatistakiYemeklerim" runat="server" class="">
+                        <i class="fa-solid fa-turkish-lira-sign"></i>
+                        <span style="animation-delay: .3s">Satıştaki Yemeklerim</span></a>
+                
+</div> 
+                </nav>
+               
+            </footer>
+        </div>
+    </aside>
+         </form>
+    <!-- footer section ends -->
+    <!-- loader part  -->
+    <%-- <div class="loader-container">
+        <img src="/images/loader.gif" alt="">
+    </div>--%>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/7bfdc6a926.js" crossorigin="anonymous"></script>
+    <!-- custom js file link  -->
+   
+    <script src="../js/ProfilDuzen.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/sidebar.js"></script>
+</body>
+</html>
